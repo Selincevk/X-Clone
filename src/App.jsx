@@ -10,10 +10,11 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Login/>} />
 
-<Route element={<Protected/>} />
-      <Route path='/feed' element={<Feed/>} />
-      <Route path='/profile' element={<h1>Profil</h1>} />
-      <Route path='/settings' element={<h1>Ayarlar</h1>} />
+      <Route element={<Protected />}>
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/profile" element={<h1>Profil</h1>} />
+          <Route path="/settings" element={<h1>Ayarlar</h1>} />
+        </Route>
     </Routes>
     </BrowserRouter>
   )

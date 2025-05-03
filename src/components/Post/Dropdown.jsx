@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Feed = () => {
+const Dropdown = () => {
   return (
     <div>
-    
+      
     </div>
   )
 }
 
-export default Feed
+export default Dropdown

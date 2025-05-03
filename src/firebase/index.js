@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import {getFirestore} from "firebase/firestore"
-
+import {getFirestore} from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -22,4 +22,7 @@ export const google = new GoogleAuthProvider()
 export const auth = getAuth(app)
 
 // ! database hizmetinin referansını al
-export const db = getFirestore(app)
+export const db = getFirestore(app) // veritabanı kurulumu 
+
+// ! medya depolama alanının referansını al
+export const storage = getStorage(app);
