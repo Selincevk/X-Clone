@@ -2,28 +2,25 @@ import moment from "moment"
 import { getUserName } from "../../utils/helpers"
 import { MdEdit } from "react-icons/md";
 
-const UserInfo = ({tweet}) => {
+const UserInfo = ({ tweet }) => {
+  // createdAt varsa toDate uygula, yoksa "Bilinmiyor"
+  let date = tweet.createdAt?.toDate?.();
+  date = date ? moment(date).fromNow() : "Bilinmiyor";
 
-// tarihi date formatına çevir
-let date = tweet.createdAt?.toDate()
-
-// tarihi formata çevir (kullanıcının attığı zamana göre)
-date = moment(date).fromNow()
   return (
     <div className="flex gap-2 items-center whitespace-nowrap text-gray-400">
-        <p className="text-white font-semibold">{tweet.user.name} </p>
-        <p className="text-sm">{getUserName(tweet.user.name)} </p>
-        <p className="text-sm">{date} </p>
+      <p className="text-white font-semibold">{tweet.user?.name}</p>
+      <p className="text-sm">{getUserName(tweet?.user?.name)}</p>
+      <p className="text-sm">{date}</p>
 
-    {tweet.isEdited && (
+      {tweet.isEdited && (
         <div>
-            <MdEdit className="md:hidden"/>
-            <span className="max-md:hidden text-sm">Düzenlendi</span>
+          <MdEdit className="md:hidden" />
+          <span className="max-md:hidden text-sm">Düzenlendi</span>
         </div>
-    )}
-      
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default UserInfo
+export default UserInfo;

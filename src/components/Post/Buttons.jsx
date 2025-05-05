@@ -14,7 +14,7 @@ const Buttons = ({ tweet }) => {
     // like'lamadıysam: kullanıcı id'sini likes dizisine ekle
     await updateDoc(docRef, {
       likes: isLiked
-        ? arrayRemove(auth.User.uid)
+        ? arrayRemove(auth.currentUser.uid)
         : arrayUnion(auth.currentUser.uid),
     });
   };
