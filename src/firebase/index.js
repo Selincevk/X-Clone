@@ -4,12 +4,12 @@ import {getFirestore} from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-apiKey: "AIzaSyDOJ3S5dRXIKKrAjVePiJLv5OKrfd7Vq38",
-  authDomain: "twitterclone-1dd22.firebaseapp.com",
-  projectId: "twitterclone-1dd22",
-  storageBucket: "twitterclone-1dd22.firebasestorage.app",
-  messagingSenderId: "846637779340",
-  appId: "1:846637779340:web:54ed74dc5a69b0b81e6ea9"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
   };
   
 
