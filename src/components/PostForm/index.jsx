@@ -35,6 +35,7 @@ const clearImage = () => {
     // ! inputlardaki verileri al
     const text = e.target.text.value
     const file = e.target.image.files[0];
+    console.log(file)
 
     // ! veri yoksa bildirim gönder
     if(!text.trim() && !file) return toast.warning("Lütfen içeriği belirleyiniz")

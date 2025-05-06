@@ -10,7 +10,7 @@ const Dropdown = ({ tweet }) => {
   const checkboxRef = useRef();
 
   // tweet'i gönderen kişi ile şuan oturumu açık olan kişinin id'si aynı mı?
-  const isOwn = tweet.user?.id === auth.currentUser.uid;
+  const isOwn = tweet.users?.id === auth.currentUser.uid;
 
   // dökümanı sil
   const handleDelete = () => {
@@ -25,11 +25,11 @@ const Dropdown = ({ tweet }) => {
   };
 
   return (
-    isOwn && (
+      isOwn && (
       <>
         <label className="popup">
           <input ref={checkboxRef} type="checkbox" />
-          <div className="burger" tabIndex={0} >
+          <div className="burger" tabIndex="0">
             <span></span>
             <span></span>
             <span></span>

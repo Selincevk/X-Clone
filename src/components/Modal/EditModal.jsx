@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import Modal from "./index";
+import Modal from "../Modal/index"
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useState } from "react";
