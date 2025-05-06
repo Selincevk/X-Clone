@@ -10,7 +10,7 @@ const Dropdown = ({ tweet }) => {
   const checkboxRef = useRef();
 
   // tweet'i gönderen kişi ile şuan oturumu açık olan kişinin id'si aynı mı?
-  const isOwn = tweet.users?.id === auth.currentUser.uid;
+  const isOwn = tweet.user?.id === auth.currentUser.uid;
 
   // dökümanı sil
   const handleDelete = () => {

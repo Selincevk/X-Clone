@@ -10,7 +10,7 @@ const UserInfo = ({ tweet }) => {
   return (
     <div className="flex gap-2 items-center whitespace-nowrap text-gray-400">
       <p className="text-white font-semibold">{tweet.user?.name}</p>
-      <p className="text-sm">{getUserName(tweet?.user?.name)}</p>
+      <p className="text-sm">{getUserName(tweet.user?.name)}</p>
       <p className="text-sm">{date}</p>
 
       {tweet.isEdited && (

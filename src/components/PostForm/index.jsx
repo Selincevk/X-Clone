@@ -53,14 +53,15 @@ const collectionRef = collection(db,"tweets")
 await addDoc(collectionRef, {
     content : {text,image: url },
     likes: [],
-    isEdited: true,
+    isEdited: false,
     createdAt : serverTimestamp(),
-    users : {
+    user : {
         id: user.uid,
         name: user.displayName,
         photo: user.photoURL
     }
 })
+
 // Formu Sıfırla
 e.target.reset()
 setPreview(null)

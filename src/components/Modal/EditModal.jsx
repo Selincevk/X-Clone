@@ -22,7 +22,7 @@ const EditModal = ({ isOpen, close, tweet }) => {
     // inputlardaki verileri al
     const text = e.target[0].value.trim();
     const file = e.target[1].files && e.target[1].files[0];
-
+    
     // verileri kontrol et
     if (!text && !file && !tweet.content.image) {
       return toast.info("Lütfen içeriği belirleyin");
@@ -75,7 +75,7 @@ const EditModal = ({ isOpen, close, tweet }) => {
         />
 
         <label className="text-sm mt-8 mb-3">Fotoğrafı Değiştir</label>
-        {!isPicDeleting && tweet.content.image ? (
+        {!isPicDeleting && tweet?.content?.image ? (
           <button onClick={() => setIsPicDeleting(true)} className="button">
             Resmi Kaldır
           </button>
